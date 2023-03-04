@@ -1,0 +1,59 @@
+/* Reset styles for consistency */
+html, body, header, nav, main, footer {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body styles */
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(64, 77, 92);
+  margin: 0rem;
+  overflow:hidden;
+
+}
+
+  /* Header styles */
+  header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo styles */
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #1a73e8;
+    margin-right: 10px;
+  }
+  
+  /* Navigation styles */
+  nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: #757575;
+    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer
+  }
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
