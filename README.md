@@ -8,19 +8,19 @@ For the creation of my personal website, I made a homepage called "index.html" w
 The project files and folders are organized as follows:
 ```
 
-+-- README.md           
-+-- Pages                   
-    +-- index.html          
-    +-- section-1.html      
-    +-- section-2.html      
-    +-- section-3.html      
-    +-- section-4.html      
-    +-- section-5.html     
-    +-- coming-soon.html   
-    +-- contact.html        
-+-- Scripting              
-    +-- script.js           
-    +-- poke-scripting.js   
++-- README.md
++-- index.html      
++-- Pages        
+    +-- section-1.html
+    +-- section-2.html
+    +-- section-3.html
+    +-- section-4.html
+    +-- section-5.html
+    +-- coming-soon.html
+    +-- contact.html
++-- Scripting
+    +-- script.js
+    +-- poke-scripting.js
 +-- Styles
     +-- styles.css
     +-- poke-scripting.css
