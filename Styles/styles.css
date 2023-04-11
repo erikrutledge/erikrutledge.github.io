@@ -117,4 +117,16 @@ nav a:hover {
   #previewTrack #text {
     padding-bottom: 50px;
   }
+  
+}
+@media all and (min-width:0px) and (max-width: 724px) {
+  #previewTrack {
+    top: 1650px;
+    display:table;
+    left: 50%;
+  } 
+
+  #previewTrack #text {
+    padding-bottom: 50px;
+  }
 }
