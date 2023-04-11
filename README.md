@@ -7,18 +7,26 @@ For the creation of my personal website, I made a homepage called "index.html" w
 ---
 The project files and folders are organized as follows:
 ```
-Erik's Website          (root folder)
-    +-- README.md           (general info)
-    +-- index.html          (website homepage)
-    +-- section-1.html      (1st subpage)
-    +-- section-2.html      (2nd subpage)
-    +-- section-3.html      (3rd subpage)
-    +-- section-4.html      (4th subpage)
-    +-- section-5.html      (5th subpage)
-    +-- contact.html        (6th subpage)
-    +-- script.js           (JS scripting)
-    +-- styles.css          (CSS formatting)
-    +--Screenshots          (file for all images)
+
++-- README.md           
++-- Pages                   
+    +-- index.html          
+    +-- section-1.html      
+    +-- section-2.html      
+    +-- section-3.html      
+    +-- section-4.html      
+    +-- section-5.html     
+    +-- coming-soon.html   
+    +-- contact.html        
++-- Scripting              
+    +-- script.js           
+    +-- poke-scripting.js   
++-- Styles
+    +-- styles.css
+    +-- poke-scripting.css
++--Screenshots
+    +-- ...
+
 ```
 
 ## Video Walkthrough
@@ -28,7 +36,7 @@ https://youtu.be/8wLiP8hVwp4
 
 ## Development Environment
 ---
-The project was written using HTML, CSS, and JavaScript.
+The project was written in VS Code for mac using HTML, CSS, and JavaScript.
 
 ## Future Improvements
 ---

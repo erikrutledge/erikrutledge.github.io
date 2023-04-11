@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokulation</title>
+  <link rel="stylesheet" href="/Styles/styles.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="tab" data-tab="#homepage">Home</a>
+    <a href="section-2.html" class="tab" data-tab="#section1">Next Project</a>
+
+  </nav>
+
+  <main>
+    <div class="grid-container">
+      <div class="grid-item"> </div>
+
+      <div class="grid-item">
+      <p>Pokulation</p>
+      <p class="body-text"> Pokulation is a Pokemon Simulation game written in Python using the Python Arcade library. I had this idea for a game when I saw a project someone else made for a rock, paper, scissors simulation. Their project was just a button that created a random amount of rock/paper/scissor objects that moved randomly around the screen bouncing off each other. When the objects collided, the losing object would transform into the object that defeated it, and this would happen until all the items were the same at which point the simulation would end. </p>
+      <a href="https://github.com/erikrutledge/Pokulation-Game">
+        <img class="example-images" src="/Screenshots/1 pokulation/startscreen.png">
+      </a>
+      <p class="body-text"> I wanted to expand the concept of this collision simulation idea, but with more collisions, more complex interactions, and input from the player to make it more of a game than a passive experience. That’s when I got the idea to use Pokemon types as the collision criteria, for example water type is super-effective against fire so that collision would result in the deletion of the fire type object. This type-logic includes all 18 different Pokemon types and every possible collision combination.</p>
+      <p class="body-text"> Another major difference I included in my game that wasn’t present in the rock paper scissors version was additional user interaction. To do this I created a play field with a menu bar across the bottom of the screen. When you enter the level, nothing will happen because the game is waiting for the user to place the objects into the play area. I gave the player the ability to drag and drop objects from the menu bar into the playing field. After dropping an object, the player can click around the window, which points an arrow, to tell the piece which direction to apply the impulse force. After the pieces are placed and directions are given, the player can press “Start!” to begin the simulation and all the pieces start along their given trajectory simultaneously. </p>
+      <a href="https://github.com/erikrutledge/Pokulation-Game">
+        <img class="example-images" src="/Screenshots/1 pokulation/playedgame.png">
+      </a>
+      <p class="body-text"> The current state of the project has all the functional elements created and enough spaces to create 12 levels. There are some improvements that I would like to make, but I won’t go into that here. If you’re interested in the technical development, click the image above to access the public GitHub repository.</p>
+      </div>
+      <div class="grid-item"> </div>
+
+    </div>
+  </main>
+
+  <script src="/Scripting/script.js"></script>
+  </body>
+  </html>

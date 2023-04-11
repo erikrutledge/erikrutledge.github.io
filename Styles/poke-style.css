@@ -1,0 +1,35 @@
+/* HTML Selectors */
+article {
+    margin: 10px;
+}
+
+body {
+    font-family: 'Kalam', cursive;
+    height: 100%;
+}
+
+div {
+    margin: 10px;
+    text-align: center;
+}
+
+header {
+    margin: auto;
+    text-align: center;
+}
+
+img {
+    width: 80%;
+}
+
+label {
+    display: inline-block;
+    min-width: 120px;
+    text-align: right;
+}
+
+main {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
