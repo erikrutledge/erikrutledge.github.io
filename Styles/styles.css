@@ -21,11 +21,17 @@ p {
   text-transform: none;
 }
 
-#text a{
+#text a {
   text-decoration: none;
+  color: white;
 }
-#text:has(.fancy:hover) .word:not(.fancy:hover) {
-  opacity: 0.6;
+
+.word:hover {
+  transform: scale(1.05);
+}
+
+.word {
+  transition: transform .1s;
 }
 
 .image {
@@ -53,28 +59,58 @@ p {
   display: flex;
   gap: 4vmin;
   position:absolute;
-  left: 50%;
-  top: 50%;
+  left: 25%;
+  top: 48%;
   transform: translate(0%, -50%);
 }
 
-#wrapper {
-  transition: transform .2s;
+#wrapper .image {
+  transition: transform .3s;
+  transition-property: transform, opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 #wrapper .text {
   position:relative;
-  bottom: 225px;
+  opacity: 0%;
+  bottom: 50px;
   left: 50px;
-  visibility: hidden;
-}
-#wrapper:hover {
-  transform: scale(1.05);
+  transition-property: transform, opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
 }
 #wrapper:hover .text {
-  visibility: visible;
+  opacity: 100%;
+
 }
 #wrapper:hover .image {
-  opacity: 33%;
+  transform: scale(1.05);
+  transform: translateY(-50px);
+  opacity: 30%;
+}
+
+#wrapper .intro {
+  transition: transform .3s;
+  opacity: 100%;
+  transition-property: transform, opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+#wrapper .contact {
+  position: relative;
+  opacity: 0%;
+  bottom: 40px;
+  transition-property: transform, opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+#wrapper:hover .contact {
+  opacity: 100%;
+}
+#wrapper:hover .intro {
+  transform: scale(1.05);
+  transform: translateY(-50px);
+  opacity: 30%;
 }
 
 nav {
@@ -107,14 +143,29 @@ nav a:hover {
   margin: auto;
 }
 
-@media all and (min-width:0px) and (max-width: 724px) {
+@media (pointer:none), (pointer:coarse) {
   #previewTrack {
-    top: 1650px;
+    top: 350%;
     display:table;
-    left: 50%;
+    left: 33%;
+    scale: 1.25;
   } 
 
   #previewTrack #text {
     padding-bottom: 50px;
   }
- 
+}
+
+@media only screen and (max-width: 725px) {
+  
+  #previewTrack {
+    top: 350%;
+    display:table;
+    left: 40%;
+    scale: 1.25;
+  } 
+
+  #previewTrack #text {
+    padding-bottom: 50px;
+  }
+}
