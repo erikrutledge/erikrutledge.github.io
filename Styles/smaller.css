@@ -1,0 +1,64 @@
+@media (max-width: 640px) {
+    #drmarioImage{
+        content:url("/Screenshots/drmario/alt-drmario-tumbnail.png")
+    }
+    #pokulationImage{
+        content:url("/Screenshots/pokulation/alt-pokulation-thumbnail.png")
+    }
+    #greedImage{
+        content:url("/Screenshots/greed/alt-greed-thumbnail.png")
+    }
+    #websiteImage{
+        content:url("/Screenshots/website/alt-website-thumbnail.png")
+    }
+    #pokeapiImage{
+        content:url("/Screenshots/pokeapi/alt-pokeapi-thumbnail.png")
+    }
+    #aidehdImage{
+        content:url("/Screenshots/aidehd/alt-aidehd-thumbnail.png")
+    }
+    #tbaImage{
+        content:url("/Screenshots/tba/alt-tba-thumbnail.png")
+    }
+    #previewTrack {
+        display: inline-block;
+        grid-template-columns: 100%;
+        transform: none;
+        left: 25%;
+        right: auto;
+        top: 10%;
+        transform: translate(0%, 0%);
+    }
+    #wrapper .intro {
+        transition: none;
+        opacity: 70%;
+        transform: translateY(-50px);
+        transition-property: none, opacity;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
+    }
+    #wrapper .contact {
+        position: relative;
+        opacity: 100%;
+        bottom: 40px;
+        transition-property: transform, opacity;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
+    }
+
+    #wrapper .image {
+        transition: none;
+        opacity: 70%;
+    }
+    #wrapper .text {
+        position:relative;
+        opacity: 100%;
+        bottom: 100px;
+        left: 5%;
+        transition-duration: none;
+    }
+    #wrapper:hover .image {
+        transform: none;
+        opacity: 100%;
+    }
+}
