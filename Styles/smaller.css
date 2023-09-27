@@ -22,6 +22,7 @@
     }
     body {
         overflow-y: hidden;
+        overflow-x: auto;
     }
 
     #previewTrack {
@@ -61,7 +62,7 @@
     }
     #clickDrag {
         position: fixed;
-        top: 23%;
-        left: 10%;
+        bottom: 10%;
+        left: 100px;
     }
 }
