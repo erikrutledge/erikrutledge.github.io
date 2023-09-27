@@ -1,4 +1,4 @@
-@media (max-width: 775px) {
+@media (max-width: 500px) {
     #drmarioImage{
         content:url("/Screenshots/drmario/alt-drmario-tumbnail.png")
     }
@@ -20,45 +20,48 @@
     #tbaImage{
         content:url("/Screenshots/tba/alt-tba-thumbnail.png")
     }
-    #previewTrack {
-        display: inline-block;
-        grid-template-columns: 100%;
-        transform: none;
-        left: 25%;
-        right: auto;
-        top: 10%;
-        transform: translate(0%, 0%);
+    body {
+        overflow-y: hidden;
     }
+
+    #previewTrack {
+        display: flex;
+        gap: 4vmin;
+        position: absolute;
+        left: 20%;
+        top: 48%;
+        transform: translate(0%, -50%);
+    }
+    
     #wrapper .intro {
         transition: none;
-        opacity: 70%;
-        transform: translateY(-50px);
-        transition-property: none, opacity;
-        transition-duration: .3s;
-        transition-timing-function: ease-in-out;
+        opacity: 50%;
+    }
+    #wrapper:hover .intro {
+    transform: none;
+    opacity: 30%;
     }
     #wrapper .contact {
         position: relative;
         opacity: 100%;
-        bottom: 40px;
-        transition-property: transform, opacity;
-        transition-duration: .3s;
-        transition-timing-function: ease-in-out;
-    }
-
-    #wrapper .image {
-        transition: none;
-        opacity: 70%;
+        bottom: -20px;
     }
     #wrapper .text {
         position:relative;
         opacity: 100%;
-        bottom: 100px;
-        left: 5%;
+        bottom: -5px;
         transition-duration: none;
+    }
+    #wrapper .image {
+        transition: none;
+        opacity: 70%;
     }
     #wrapper:hover .image {
         transform: none;
-        opacity: 100%;
+    }
+    #clickDrag {
+        position: fixed;
+        top: 23%;
+        left: 10%;
     }
 }
