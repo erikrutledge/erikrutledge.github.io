@@ -131,6 +131,7 @@ nav {
   text-transform: uppercase;
 }
 nav a {
+  font-size: xx-large;
   color: #ffffff;
   text-decoration: none;
   margin-right: 10px;
