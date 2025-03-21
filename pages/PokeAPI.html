@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Which Pokemon Am I?</title>
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/poke-style.css">
+</head>
+
+
+<body>
+    <header>
+        <h1>PokeGenerator - Which Pokemon are you?</h1>
+        <h2> Erik Rutledge | <a href="./template.html?project=2">Return to Portfolio</a>
+    </header>
+    <main>
+        <section>
+            <h2>
+                You are: <span id="pokemon"></span>
+            </h2>
+            <h3>
+                <img id="picture" src="https://i.pinimg.com/originals/b7/0b/93/b70b931e43aba4e57857040aad4f005d.jpg" style="width: 30%;"></img>
+            </h3>
+        </section>
+        <hr>
+        <section>
+            <h2>Select a generation then press "Calculate!"</h2>
+                <div id="genDisplay">
+                </div>
+                <select id="generation" onchange="update()">
+                    <option value="1">Generation 1</option>
+                    <option value="2">Generation 2</option>
+                    <option value="3">Generation 3</option>
+                    <option value="4">Generation 4</option>
+                    <option value="5">Generation 5</option>
+                    <option value="6">Generation 6</option>
+                    <option value="7">Generation 7</option>
+                    <option value="8">Generation 8</option>
+                    <option value="9">Any</option>
+                </select>
+                <button id="button" onclick="resolveClick()">Calculate!</button>
+        </section>
+    </main>
+    <script src="../scripts/poke-scripting.js"></script>
+</body>
+
+</html>

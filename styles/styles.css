@@ -1,0 +1,171 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #16161D;
+  margin: 0rem;
+  overflow-x: hidden;
+}
+
+p {
+  color: white;
+  font-size: 6vh;
+  font-family: "Rubik", sans-serif;
+  margin: 0rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.body-text {
+  font-size: 2vh;
+  padding: 25px;
+  text-transform: none;
+}
+
+#text a {
+  text-decoration: none;
+  color: white;
+}
+
+.word:hover {
+  transform: scale(1.05);
+}
+
+.word {
+  transition: transform .1s;
+}
+
+.image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% 50%;
+}
+
+.example-images {
+  display: block;
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  transition: transform .2s;
+}
+
+.example-images:hover {
+  transform: scale(1.05);
+}
+
+#previewTrack {
+  display: flex;
+  gap: 4vmin;
+  position:absolute;
+  left: 25%;
+  top: 48%;
+  transform: translate(0%, -50%);
+}
+
+#wrapper .image {
+  transition: transform .3s;
+  transition-property: transform, opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+#wrapper .text {
+  position:relative;
+  opacity: 0%;
+  bottom: 50px;
+  left: 50px;
+  transition-property: transform, opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+#wrapper:hover .text {
+  opacity: 100%;
+
+}
+#wrapper:hover .image {
+  transform: scale(1.05);
+  transform: translateY(-50px);
+  opacity: 30%;
+}
+
+#wrapper .intro {
+  transition: transform .3s;
+  opacity: 100%;
+  transition-property: transform, opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+#wrapper .contact {
+  position: relative;
+  opacity: 0%;
+  bottom: 40px;
+  transition-property: transform, opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+#wrapper:hover .contact {
+  opacity: 100%;
+}
+#wrapper:hover .intro {
+  transform: scale(1.05);
+  transform: translateY(-50px);
+  opacity: 30%;
+}
+
+nav {
+  background-color: #16161D;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 100px;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform .2s
+}
+
+nav a:hover {
+  transform: scale(1.1);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
+
+.grid-item {
+  margin: auto;
+}
+
+@media (pointer:none), (pointer:coarse) {
+  #previewTrack {
+    top: 350%;
+    display:table;
+    left: 33%;
+    scale: 1.25;
+  } 
+
+  #previewTrack #text {
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  
+  #previewTrack {
+    top: 350%;
+    display:table;
+    left: 40%;
+    scale: 1.25;
+  } 
+
+  #previewTrack #text {
+    padding-bottom: 50px;
+  }
+}
