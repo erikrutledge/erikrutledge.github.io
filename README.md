@@ -1,6 +1,6 @@
 ## Personal Website - Overview
 ---
-For the creation of my personal website, I made a homepage called "index.html" with a moving track of pictures that link to invividual projects when clicked on. The purpose of this project is to have a single location showing off previous projects that I can link in my resume. It's one thing to say, "I know Python, C++, Swift, HTML, CSS, JavaScript, and more," but if I were to have all my projects grouped together that a future employer can explore they would be able to see exactly how much I do or don't know 
+For the creation of my personal website, I made a homepage called "index.html" with a moving track of pictures that link to invividual projects when clicked on. The purpose of this project is to have a single location showing off previous projects that I can link in my resume. It's one thing to say, "I know Python, C++, Swift, HTML, CSS, JavaScript, etc.," but I wanted a location to group and display all my projects that anyone could explore at a glance.
 
 
 ## Project Structure 
@@ -10,33 +10,28 @@ The project files and folders are organized as follows:
 
 +-- README.md
 +-- index.html      
-+-- Pages        
-    +-- section-1.html
-    +-- section-2.html
-    +-- section-3.html
-    +-- section-4.html
-    +-- section-5.html
-    +-- coming-soon.html
++-- pages        
+    +-- template.html      // The default template used by each project page
+    +-- coming-soon.html 
     +-- contact.html
-+-- Scripting
-    +-- script.js
-    +-- poke-scripting.js
-+-- Styles
++-- scripts
+    +-- gesture.js         // Script to control paralax page movement effect
+    +-- poke-scripting.js  
+    +-- projects.json      // Data file for easy project addition and DRY implementation
+    +-- projects.js        // Script to dynamically fill the template with json data
++-- styles
     +-- styles.css
-    +-- poke-scripting.css
-+--Screenshots
-    +-- ...
+    +-- poke-style.css
+    +-- ...                // Various stylings for different device sizes
++-- media
+    +-- ...                // Contains and organizes all site images 
 
 ```
-
-## Video Walkthrough
----
-https://youtu.be/8wLiP8hVwp4
 
 
 ## Development Environment
 ---
-The project was written in VS Code for mac using HTML, CSS, and JavaScript.
+The project was written in VS Code for mac using JSON, HTML, CSS, and JavaScript.
 
 ## Future Improvements
 ---

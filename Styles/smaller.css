@@ -1,24 +1,24 @@
 @media (max-width: 500px) {
     #drmarioImage{
-        content:url("/Screenshots/drmario/alt-drmario-tumbnail.png")
+        content:url("/media/drmario/alt-drmario-tumbnail.png")
     }
     #pokulationImage{
-        content:url("/Screenshots/pokulation/alt-pokulation-thumbnail.png")
+        content:url("/media/pokulation/alt-pokulation-thumbnail.png")
     }
     #greedImage{
-        content:url("/Screenshots/greed/alt-greed-thumbnail.png")
+        content:url("/media/greed/alt-greed-thumbnail.png")
     }
     #websiteImage{
-        content:url("/Screenshots/website/alt-website-thumbnail.png")
+        content:url("/media/website/alt-website-thumbnail.png")
     }
     #pokeapiImage{
-        content:url("/Screenshots/pokeapi/alt-pokeapi-thumbnail.png")
+        content:url("/media/pokeapi/alt-pokeapi-thumbnail.png")
     }
     #aidehdImage{
-        content:url("/Screenshots/aidehd/alt-aidehd-thumbnail.png")
+        content:url("/media/aidehd/alt-aidehd-thumbnail.png")
     }
     #tbaImage{
-        content:url("/Screenshots/tba/alt-tba-thumbnail.png")
+        content:url("/media/tba/alt-tba-thumbnail.png")
     }
     body {
         overflow-y: hidden;

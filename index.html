@@ -3,8 +3,8 @@
 <head>
   <title>Erik's Webpage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/Styles/base.css">
-  <link rel="stylesheet" href="/Styles/smaller.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/smaller.css">
 </head>
 
 <body>
@@ -15,12 +15,11 @@
      <div id="text">
       <a href="Pages/contact.html">
           <p class="intro">
-          Erik<br>
+          <br>Erik<br>
           Rutledge<br>
           ----------------<br>
           Software<br>
           Engineer<br>
-          Student<br>
           ----------------<br>
           Portfolio<br>
           </p>
@@ -28,55 +27,37 @@
         </a>
       </div>
     </div>
-
-    <a href="Pages/section-1.html" style="text-decoration:none;">
-      <div id="wrapper">
-        <img class="image" id="drmarioImage" src="Screenshots/drmario/drmario-tumbnail.png" draggable="false"/>
-        <p class="text">Python</p>
-      </div>
-    </a>
-    <a href="Pages/section-2.html" style="text-decoration:none;">
-      <div id="wrapper">
-        <img class="image" id="pokulationImage" src="Screenshots/pokulation/pokulation-thumbnail.png" draggable="false"/>
-        <p class="text">Python</p>
-      </div>
-    </a>
-    <a href="Pages/section-3.html" style="text-decoration:none;">
-      <div id="wrapper">
-        <img class="image" id="greedImage" src="Screenshots/greed/greed-thumbnail.png" draggable="false"/>
-        <p class="text">C++</p>
-      </div>
-    </a>
-    <a href="Pages/section-4.html" style="text-decoration:none;">
-      <div id="wrapper">
-        <img class="image" id="websiteImage" src="Screenshots/website/website-thumbnail.png" draggable="false"/>
-        <p class="text">WebDev</p>
-      </div>
-    </a>
-    <a href="Pages/section-5.html" style="text-decoration:none;">
-      <div id="wrapper">
-        <img class="image" id="pokeapiImage" src="Screenshots/pokeapi/pokeapi-thumbnail.png" draggable="false"/>
-        <p class="text">APIs</p>
-      </div>
-    </a>
-    <a href="Pages/section-6.html" style="text-decoration:none;">
-      <div id="wrapper">
-        <img class="image" id="aidehdImage" src="Screenshots/aidehd/aidehd-thumbnail.png" draggable="false"/>
-        <p class="text">Swift</p>
-      </div>
-    </a>
-    <a href="Pages/coming-soon.html" style="text-decoration:none;">
-      <div id="wrapper">
-        <img class="image" id="tbaImage" src="Screenshots/tba/tba-thumbnail.png" draggable="false"/>
-        <p class="text">Soon...</p>
-      </div>
-    </a>
   </div>
 
   <div id="gesture">
-    <img id="clickDrag" src="Screenshots/home/click_drag.gif" draggable="false">
+    <img id="clickDrag" src="media/click_drag.gif" draggable="false">
   </div>
 </main>
-<script src="Scripting/script.js"></script>
+<script src="scripts/gesture.js"></script>
+<script>
+  async function loadProjects() {
+    const response = await fetch('./scripts/projects.json');
+    const data = await response.json();
+    const projects = data.projects.reverse(); // Reverse the order of projects
+    
+    const previewTrack = document.getElementById('previewTrack');
+    projects.forEach(project => {
+      const projectLink = document.createElement('a');
+      projectLink.href = `./pages/template.html?project=${project.id}`;
+      projectLink.style.textDecoration = 'none';
+      projectLink.innerHTML = `
+        <div id="wrapper">
+          <img class="image" src="./media/${project.id}/thumbnail.png" draggable="false"/>
+          <p class="text">${project.title}</p>
+        </div>
+      `;
+      previewTrack.appendChild(projectLink);
+    });
+  }
+
+  window.onload = () => {
+    loadProjects();
+  };
+</script>
 </body>
 </html>
