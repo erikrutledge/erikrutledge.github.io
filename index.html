@@ -30,9 +30,9 @@
 
     const previewTrack = document.getElementById('preview-track');
     projects.forEach(project => {
-      if (window.innderWidth <= 600) {
+      if (window.innerWidth < 700) {
         thumbnailFile = `./media/${project.id}/thumbnail-alt.png`;
-      } else if (window.innerWidth > 600) {
+      } else if (window.innerWidth >= 700) {
         thumbnailFile = `./media/${project.id}/thumbnail.png`;
       } 
       
