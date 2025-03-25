@@ -2,13 +2,12 @@
 <html>
 <head>
   <title>Erik's Webpage</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/media/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./styles/base.css">
 </head>
 
 <body>
-<main>
-
   <div id="preview-track" data-mouse-down-at="0" data-prev-percentage="0">
     <a href="./pages/contact.html">
       <div class="intro-card card">
@@ -18,39 +17,47 @@
     </a>
   </div>
 
-</main>
-<script src="scripts/gesture.js"></script>
+  <div id="cookie-jar" data-shown="false">
+    <p id="top-text" class="cookie-text">You look hungry, have a cookie!</p>
+    <img class="cookie-image" src="./media/cookie.png" draggable="false"/>
+    <p id="bottom-text" class="cookie-text">No trackers, just chocolate chip</p>
+  </div>
+</body>
+
 <script>
   // Load projects from JSON file
   async function loadProjects() {
-    const response = await fetch('./scripts/projects.json');
-    const data = await response.json();
-    const projects = data.projects.reverse(); // Reverse the order of projects to show newest first
-    let thumbnailFile = "./media/default.png";
+      const response = await fetch('./projects.json');
+      const data = await response.json();
+      const projects = data.projects.reverse(); // Reverse the order of projects to show newest first
+      let thumbnailFile = "./media/default.png";
 
-    const previewTrack = document.getElementById('preview-track');
-    projects.forEach(project => {
-      if (window.innerWidth < 700) {
-        thumbnailFile = `./media/${project.id}/thumbnail-alt.png`;
-      } else if (window.innerWidth >= 700) {
-        thumbnailFile = `./media/${project.id}/thumbnail.png`;
-      } 
-      
-      const projectCard = document.createElement('a');
-      projectCard.href = `./pages/template.html?project=${project.id}`;
-      projectCard.innerHTML = `
-        <div class="project-card card">
-          <img class="card-image" src="${thumbnailFile}" draggable="false"/>
-          <p class="popup-text">${project.title}</p>
-        </div>
-      `;
-      previewTrack.appendChild(projectCard);
-    });
-  }
+      const previewTrack = document.getElementById('preview-track');
+      projects.forEach(project => {
+          if (window.innerWidth < 700) {
+          thumbnailFile = `./media/${project.id}/thumbnail-alt.png`;
+          } else if (window.innerWidth >= 700) {
+          thumbnailFile = `./media/${project.id}/thumbnail.png`;
+          } 
 
-  window.onload = () => {
-    loadProjects();
+          const projectCard = document.createElement('a');
+          projectCard.style.draggable = "false";
+          projectCard.href = `./pages/template.html?project=${project.id}`;
+          projectCard.innerHTML = `
+          <div class="project-card card">
+              <img class="card-image" src="${thumbnailFile}" draggable="false"/>
+              <p class="popup-text">${project.title}</p>
+          </div>
+          `;
+          previewTrack.appendChild(projectCard);
+      });
+      }
+
+      window.onload = () => {
+      loadProjects();
   };
 </script>
-</body>
+
+<script src="scripts/gesture.js"></script>
+<script src="scripts/cookie.js"></script>
 </html>
