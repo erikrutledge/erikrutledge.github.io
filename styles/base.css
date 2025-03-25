@@ -1,183 +1,264 @@
-/* ---------- GLOBAL STYLINGS ---------- */
-body {
-  height: 100vh;
-  width: 100vw;
-  background-color: #16161D;
-  margin: 0rem;
-  overflow-x: hidden;
-  user-select: none;
-}
-
-p {
-  color: white;
-  font-size: 6vh;
-  font-family: "Rubik", sans-serif;
-  margin: 0rem;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.body-text {
-  font-size: 2vh;
-  padding: 25px;
-  text-transform: none;
-}
-
 /* ---------- DESKTOP VIEW STYLING ---------- */
-@media only screen and (min-width: 600px) {
-/* ---------- HOME PAGE STYLINGS ---------- */
-#preview-track {
-  display: flex;
-  gap: 4vmin;
-  position:absolute;
-  left: 25%;
-  top: 44%;
-  transform: translate(0%, -50%);
-}
-
-#preview-track a {
-  text-decoration: none;
-}
-
-.card {
-  max-height: 56vmin;
-}
-
-.card-image {
-  width: 40vmin;
-  min-width: 315px;
-  height: 56vmin;
-  min-height: 440px;
-  object-fit: cover;
-  object-position: 100% 50%;
-}
-
-.card img {
-  transition: transform .3s;
-  transition-property: transform, opacity;
-  transition-duration: .3s;
-  transition-timing-function: ease-in-out;
-}
-
-.popup-text {
-  position:relative;
-  opacity: 0%;
-  bottom: 75px;
-  text-align: center;
-  transition-property: transform, opacity;
-  transition-duration: .2s;
-  transition-timing-function: ease-in-out;
-  pointer-events: none;
-}
-
-.card:hover .popup-text {
-  opacity: 100%;
-  pointer-events: auto;
-}
-
-.card:hover img {
-  transform: translateY(-100px);
-  opacity: 30%;
-}
+@media (width >= 700px) {
 
 
-/* ---------- PROJECT PAGE STYLINGS ---------- */
+  /* ---------- GLOBAL STYLINGS ---------- */
 
-nav {
-  background-color: #16161D;
-  display: flex;
-  justify-content: space-between;
-  padding: 100px;
-  padding-top: 50px;
-  font-family: "Rubik", sans-serif;
-  text-transform: uppercase;
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #16161D;
+    margin: 0rem;
+    overflow-x: hidden;
+    user-select: none;
+  }
+
+  p {
+    color: white;
+    font-size: 6vh;
+    font-family: "Rubik", sans-serif;
+    margin: 0rem;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .body-text {
+    font-size: 2vh;
+    padding: 25px;
+    text-transform: none;
+  }
+
+
+  /* ---------- HOME PAGE STYLINGS ---------- */
+
+  #preview-track {
+    display: flex;
+    gap: 4vmin;
+    position:absolute;
+    left: 25%;
+    top: 44%;
+    transform: translate(0%, -50%);
+  }
+
+  #preview-track a {
+    text-decoration: none;
+  }
+
+  .card {
+    max-height: 56vmin;
+  }
+
+  .card-image {
+    width: 40vmin;
+    min-width: 315px;
+    height: 56vmin;
+    min-height: 440px;
+    object-fit: cover;
+    object-position: 100% 50%;
+  }
+
+  .card img {
+    transition: transform .3s;
+    transition-property: transform, opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .popup-text {
+    position:relative;
+    opacity: 0%;
+    bottom: 75px;
+    text-align: center;
+    transition-property: transform, opacity;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    pointer-events: none;
+  }
+
+  .card:hover .popup-text {
+    opacity: 100%;
+    pointer-events: auto;
+  }
+
+  .card:hover img {
+    transform: translateY(-100px);
+    opacity: 30%;
+  }
+
+
+  /* ---------- PROJECT PAGE STYLINGS ---------- */
+
+  nav {
+    background-color: #16161D;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    padding-top: 50px;
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
+  }
+
+  nav a {
+    font-size: x-large;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform .2s
+  }
+
+  nav a:hover {
+    transform: scale(1.1);
+  }
+
+  .example-images {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    transition: transform .2s;
+  }
+  .example-images:hover {
+    transform: scale(1.05);
+  }
+
+  .example-videos {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+  }
+
+  .content-container {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content {
+    margin: auto;
+  }
+
+  .contact {
+    text-align: center;
+  }
 }
 
-nav a {
-  font-size: x-large;
-  color: #ffffff;
-  text-decoration: none;
-  margin-right: 10px;
-  cursor: pointer;
-  transition: transform .2s
-}
 
-nav a:hover {
-  transform: scale(1.1);
-}
 
-.example-images {
-  display: block;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  transition: transform .2s;
-}
-.example-images:hover {
-  transform: scale(1.05);
-}
 
-.example-videos {
-  display: block;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5px;
-}
 
-.content-container {
-  display: block;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.content {
-  margin: auto;
-}
-.contact {
-  text-align: center;
-}
-}
 
 /* ---------- MOBILE VIEW STYLING ---------- */
-@media only screen and (max-width: 600px) {
+@media (width < 700px) {
+
+
+  /* ---------- GLOBAL STYLINGS ---------- */
+
+  body {
+    background-color: #16161D;
+    margin: 0rem;
+  }
+
+  p {
+    color: #C5C5D2;
+    font-size: 2vh;
+    font-family: "Lucida Console", "Monaco", monospace;
+    margin: 0rem;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .body-text {
+    color: #C5C5D2;
+    font-size: 1vh;
+    padding: 25px;
+    font-weight: 100;
+  }
+
+
+  /* ---------- HOME PAGE STYLINGS ---------- */
+
   #preview-track {
-  display: flex;
-  gap: 10rem;
-  position: absolute;
-  left: 10%;
-  top: 5%;
-}
+    display: block;
+    margin: 100px auto;
+    width: 90%;
+  }
 
-#preview-track a {
-  text-decoration: none;
-}
+  #preview-track a {
+    color: #C5C5D2;
+  }
 
-.card-image {
-  width: 40vmin;
-  min-width: 315px;
-  height: 56vmin;
-  min-height: 440px;
-  object-fit: cover;
-  object-position: 100% 50%;
-}
+  .card {
+    text-align: center;
+    padding-bottom: 200px;
+  }
 
-.popup-text {
-  position:relative;
-  top: 15px;
-  text-align: center;
-  font-size: large;
-  pointer-events: none;
-}
 
-.card:hover .popup-text {
-  opacity: 100%;
-  pointer-events: auto;
-}
+  .card-image {
+    width: 70%;
+    min-width: 300px;;
+    object-fit: cover;
+  }
 
-.card:hover img {
-  transform: translateY(-100px);
-  opacity: 30%;
-}
+  .popup-text {
+    padding: 15px;
+    position:relative;
+    text-align: center;
+  }
+
+
+  /* ---------- PROJECT PAGE STYLINGS ---------- */
+
+  nav {
+    background-color: #16161D;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    padding-top: 50px;
+    font-family: "Lucida Console", "Monaco", monospace;
+    text-transform: uppercase;
+  }
+
+  nav a {
+    font-size: x-large;
+    color: #C5C5D2;
+    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .example-images {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+
+  .example-videos {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+  }
+
+  .content-container {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content {
+    margin: auto;
+  }
+
+  .contact {
+    text-align: center;
+  }
 }
